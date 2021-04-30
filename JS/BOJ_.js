@@ -1,8 +1,6 @@
-let input = require('fs').readFileSync('/dev/stdin').toString();
+let input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
-function Solution(input){
-
-
-}
-
-console.log(Solution(input));
+let num = input.split(" ");
+const sum = BigInt(num[0])+BigInt(num[1]);
+const result = sum.toString().split("n").join("");
+console.log(result);
