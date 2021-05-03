@@ -1,4 +1,1 @@
-console.log("\\    /\\");
-console.log(" )  ( ')");
-console.log("(  /  )");
-console.log(" \\(__)|");
+let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
