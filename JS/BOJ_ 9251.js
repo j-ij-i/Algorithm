@@ -19,4 +19,4 @@ const array = Array.from(Array(2000), () => Array());
                     array[i - 1][j]
             ) }
         }
-console.log(array[len][len2])
+console.log(array[len][len2]);
