@@ -1,6 +1,13 @@
-//두 정수 사이의 합
+//문자열 다루기 기본
 
-function solution(a, b) {
-  var answer = '';
+function solution(s) {
+  var answer = true;
+  //isNaN(s);
+  if(s.match(/[^0-9]/)){
+    answer = false
+  }
+  if(s.length !== 4 && s.length !== 6){
+    answer = false;
+  }
   return answer;
 }

@@ -1,10 +1,13 @@
 //같은 숫자는 싫어
 function solution(arr)
 {
-    var answer = [];
-
-    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    console.log('Hello Javascript')
-    
-    return answer;
+    var answer = '';
+    let AnsArr = [];
+    for(let i = 0; i<arr.length ; i++){
+        let j = AnsArr.length-1;
+        if(AnsArr[j] !== arr[i]){
+            AnsArr.push(arr[i]);
+        }
+    }
+    return AnsArr;
 }
