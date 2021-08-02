@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -36,7 +37,7 @@ public class BOJ_1244 {
 					switchArr[Gswitch] = 1;
 				
 				while(true) {
-					if((Gswitch-count)<0 || (Gswitch+count)>=n) {
+					if((Gswitch-count)<0 || (Gswitch+count)>=n || switchArr[Gswitch-count] != switchArr[Gswitch+count]) {
 						break;
 					}else if(switchArr[Gswitch-count] == switchArr[Gswitch+count]){
 						if(switchArr[Gswitch-count] == 1) {
