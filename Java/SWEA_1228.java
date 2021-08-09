@@ -1,38 +1,44 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
+
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class SWEA_1228 {
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
-		
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
 		StringBuilder sb = new StringBuilder();
 		
-		for(int tc = 1 ; tc <= 10 ;tc++) {
-			int T = Integer.parseInt(in.readLine());
-			String str = in.readLine();
-			int valid = 1;
-			while(true) {
-				String g = "[]";
-				str = str.replace("()","");
-				str = str.replace("<>","");
-				str = str.replace(g, "");
-				str = str.replace("{}","");
-				if(str.contains("()") || str.contains("<>") || str.contains(g) || str.contains("{}") ) {
-					continue;
-				}else if(str.length()==0) {
-					break;
-				}
-				else {
-					valid = 0;
-					break;
-				}
+		for(int i = 1; i <= 10; i++) {
+			int N = sc.nextInt();
+			LinkedList<Integer> list = new LinkedList<Integer>();
+			for(int j = 0 ; j<N; j++) {
+				int data = sc.nextInt();
+				list.add(data);
 			}
-			System.out.println(str);
-			sb.append("#").append(tc).append(" ").append(valid).append("\n");	
-		}
+			int NC = sc.nextInt();
+			sc.nextLine();
+			String str = sc.nextLine();		
+			String []Num = str.split("I ");
+			for(int a = 0; a<Num.length; a++) {
+				String []CodeArr= Num[a].split(" ");
+				if(CodeArr[0].equals(""))
+					continue;
+				int start = Integer.parseInt(CodeArr[0]);
+				for(int c = 2; c < CodeArr.length; c++ ) {
+					list.add(start, Integer.parseInt(CodeArr[c]));
+					start++;
+				}
+				}
+				sb.append("#").append(i).append(" ");
+				for(int x = 0 ; x < 10 ; x++) {
+					sb.append(list.get(x)).append(" ");
+				}
+				sb.append("\n");
+			}
+			
 		System.out.println(sb.toString());
+		}
+
 	}
 
-}
+
