@@ -1,5 +1,3 @@
-package com.ssafy.day1006;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
