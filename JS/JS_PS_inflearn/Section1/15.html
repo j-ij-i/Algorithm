@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer;
+        while (true) {
+          console.log("??");
+          if (s.length === 1) {
+            answer = s;
+            break;
+          } else {
+            s = s.substring(1);
+            s = s.slice(0, -1);
+          }
+        }
+        return answer;
+      }
+      console.log(solution("s2tuffd1y"));
+    </script>
+  </body>
+</html>
