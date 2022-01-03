@@ -1,12 +1,10 @@
-package algo_1020;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 //01:46:37
 //https://www.acmicpc.net/problem/17822
-public class BOJ_17822 {
+public class BOJ_17822_원판돌리기 {
 	static int arr[][];
 	static int dn[] = { 0, 0, 1, -1 };
 	static int dm[] = { 1, -1, 0, 0 };

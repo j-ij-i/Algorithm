@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ_2239 {
+public class BOJ_2239_스도쿠 {
 	static int map[][];
 	static boolean flag;
 	public static void main(String[] args) throws IOException {

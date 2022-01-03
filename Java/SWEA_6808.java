@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class SWEA_6808_bit {
+public class SWEA_6808 {
 	static int Ip=9, P=18, resultWin, resultLose, flag;
 	static int arr[];
 	static int Allnumbers[]; // 

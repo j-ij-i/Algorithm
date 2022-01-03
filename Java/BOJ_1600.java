@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BOJ_1600 {
 	static int hx[] = { 1, 2, -1, -2, 1, -2, -1, 2 };
 	static int hy[] = { 2, 1, -2, -1, -2, 1, 2, -1 };
 	static int dx[] = { 0, 0, -1, 1 };

@@ -1,10 +1,9 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class SWEA_3324 {
+public class SWEA_3234 {
 	static boolean visited[];
 	static int input[];
 	static int numbers[];

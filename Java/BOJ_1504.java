@@ -23,7 +23,7 @@ class Node implements Comparable<Node> {
  
 }
  
-public class Main {
+public class BOJ_1504 {
     static int N, E;
     static ArrayList<ArrayList<Node>> a; // 인접리스트.
     static int[] dist; // 시작점에서 각 정점으로 가는 최단거리.
@@ -70,7 +70,6 @@ public class Main {
         res1 += dijkstra(1, v1);
         res1 += dijkstra(v1, v2);
         res1 += dijkstra(v2, N);
-
         int res2 = 0;
         res2 += dijkstra(1, v2);
         res2 += dijkstra(v2, v1);
@@ -84,6 +83,7 @@ public class Main {
         br.close();
     }
  
+    // 다익스트라 알고리즘
     public static int dijkstra(int start, int end) {
         Arrays.fill(dist, INF);
         Arrays.fill(check, false);

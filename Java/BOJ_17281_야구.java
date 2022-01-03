@@ -1,11 +1,9 @@
-package algo_1011;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ_17281 {
+public class BOJ_17281_야구 {
 	static int start,max,N;
 	static int number[];
 	static int inning[][];

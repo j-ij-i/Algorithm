@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BOJ_17471 {
+public class BOJ_17471_게리맨더링 {
 	static int N,result;
 	static int map[][];
 	static int people[];

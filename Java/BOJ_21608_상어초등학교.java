@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class BOJ_21608_상어초등학교 {
     static int N;
     static int[][] map;
     static int[][] like_list;

@@ -1,5 +1,3 @@
-package algo_1007;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

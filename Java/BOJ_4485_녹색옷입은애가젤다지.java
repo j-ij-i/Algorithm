@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class BOJ_4485 {
+public class BOJ_4485_녹색옷입은애가젤다지 {
     static int INF = Integer.MAX_VALUE;
     static int[] dx = {0, -1, 0, 1};
     static int[] dy = {-1, 0, 1, 0};

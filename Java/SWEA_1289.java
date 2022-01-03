@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SWEA1289 {
+public class SWEA_1289 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

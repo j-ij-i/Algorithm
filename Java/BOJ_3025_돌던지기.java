@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BOJ_3025_돌던지기 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); //bufferedstream으로 입력을 한줄단위로 받아들인다.
 		StringTokenizer st; // StringTokenizer로 받아오는 문자열의 공백을 처리하여 나타낸다.

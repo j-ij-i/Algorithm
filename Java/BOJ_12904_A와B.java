@@ -1,10 +1,8 @@
-package algo_1109;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ_12904 {
+public class BOJ_12904_A와B {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder S = new StringBuilder(br.readLine());

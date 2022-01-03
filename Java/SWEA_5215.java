@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class SWEA_5215_br {
+public class SWEA_5215 {
 	static int arr[][] ;
 	static int Maxcal,count,sum,N, MaxFlavor;
 	static boolean flag[];

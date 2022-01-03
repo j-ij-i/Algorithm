@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BOJ_2624_동전바꿔주기 {
 
 	static int t,k;
 	static int[][] coin;

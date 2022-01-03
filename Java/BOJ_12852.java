@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class BOJ_12852 {
 	static  long[] memo; 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

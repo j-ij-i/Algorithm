@@ -1,12 +1,10 @@
-package com.ssafy.day1001;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class BOJ_17143 {
+public class BOJ_17143_낚시왕 {
 	static int dx[] = { -1, 1, 0, 0 };
 	static int dy[] = { 0, 0, 1, -1 };
 	static int fisher = 0;

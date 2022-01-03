@@ -1,12 +1,10 @@
-package algo_0923;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class JOL_1681_해밀턴순환회로 {
+public class JOL_1681_해밀턴순환회로_fail {
 	static int map[][];
 	static int N;
 	static int[] input, selected;

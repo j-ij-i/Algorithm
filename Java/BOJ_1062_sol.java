@@ -1,11 +1,9 @@
-package algo_0901;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
  
-public class BOJ_1062_1 {
+public class BOJ_1062_sol {
     static int N,K;
     static int max = 0;
     static boolean visit[] = new boolean[26];

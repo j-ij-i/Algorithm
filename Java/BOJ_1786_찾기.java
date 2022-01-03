@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * @author taeheekim
  */
-public class Main {
+public class BOJ_1786_찾기 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		char[] text = in.readLine().toCharArray();

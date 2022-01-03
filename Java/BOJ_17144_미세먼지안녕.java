@@ -11,7 +11,6 @@ public class BOJ_17144_미세먼지안녕 {
 	static int R, C, T, UpAir, DownAir;
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 

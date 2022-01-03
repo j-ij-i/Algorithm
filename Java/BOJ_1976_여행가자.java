@@ -1,5 +1,3 @@
-package algo_1007;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class BOJ_1976 {
+public class BOJ_1976_여행가자 {
 	static int map[][];
 	static int totalCnt,M,N;
 	static ArrayList<Integer> list;

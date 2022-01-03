@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BOJ_2606 {
 	public static int[] parent;
 	public static int N, M;
 	public static void main(String[] args) throws NumberFormatException, IOException {
