@@ -17,7 +17,6 @@ public class SWEA_3307 {
 			for(int j = 0 ; j < N ; j++) {
 				arr[j] = Integer.parseInt(st.nextToken());
 			}
-			int dp[] = new int[N+1];
 			int max = 0;
 			for(int j=0 ; j < N ; j++) {
 				LIS[j] = 1; // 본인만 가질 경우를 기본으로 주고 시작.

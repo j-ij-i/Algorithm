@@ -11,7 +11,6 @@ public class BOJ_3985 {
 		int L = Integer.parseInt(br.readLine());
 		int N = Integer.parseInt(br.readLine());
 		boolean arr[] = new boolean[L+1];
-		int end = 0;
 		int maxCake = Integer.MIN_VALUE;
 		int thinkMax = Integer.MIN_VALUE;
 		int thinkres = 0;
