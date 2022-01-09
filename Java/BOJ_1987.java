@@ -1,45 +1,50 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+package algo_0110;
+
+import java.io.*;
+import java.util.*;
 
 public class BOJ_1987 {
-	static int r, c, max = 0;
-	static char[][] arr;
-	static boolean[] visit;
-	
-	private static void dfs(int x, int y, int d) {
-		int[] dx = {-1, 1, 0, 0};
-		int[] dy = {0, 0, -1, 1};
-
-		visit[arr[x][y] - 'A'] = true;
-		for(int i = 0; i < 4; i++) {
-			int xx = x + dx[i];
-			int yy = y + dy[i];
-			if(xx > 0 && yy > 0 && xx <= r && yy <= c) {
-				if(!visit[arr[xx][yy] - 'A'])
-					dfs(xx, yy, d + 1);
-			}
-		}
-		visit[arr[x][y] - 'A'] = false;		
-		max = Math.max(max, d);
-	}
-	
+	static int R,C,MAX;
+	static char arr[][];
+	static int dx[] = {-1,0,0,1};
+	static int dy[] = {0,1,-1,0};
+	static boolean visited[];
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st ;
+		StringTokenizer st;
 		st = new StringTokenizer(br.readLine());
-		r = Integer.parseInt(st.nextToken());
-		c = Integer.parseInt(st.nextToken());
-		arr = new char[r+1][c+1];
-		visit = new boolean[26];
-		
-		for(int i = 1; i <= r; i++) {
+		R = Integer.parseInt(st.nextToken());
+		C = Integer.parseInt(st.nextToken());
+		arr = new char[R][C];
+		MAX = Integer.MIN_VALUE;
+		for(int i = 0 ; i < R ;i++) {
 			String str = br.readLine();
-			for(int j = 1; j <= c; j++)
-				arr[i][j] = str.charAt(j-1);
+			for(int j = 0 ; j < C ; j++) {
+				arr[i][j] = str.charAt(j);
+			}
 		}
-		dfs(1, 1, 1);
-		System.out.print(max);
+		visited = new boolean[26];
+		dfs(0, 0, 1);
+		System.out.println(MAX);
+	}
+	private static void dfs(int i, int j, int m) {
+		// TODO Auto-generated method stub
+		visited[arr[i][j]-'A'] = true;
+		for(int d = 0 ; d < 4 ; d++) {
+			int nx = dx[d]+i;
+			int ny = dy[d]+j;
+			if(isArea(nx,ny)) {
+				if(!visited[arr[nx][ny]-'A']) {
+					dfs(nx,ny,m+1);
+				}
+			}
+		}
+		visited[arr[i][j]-'A'] = false;
+		MAX = Math.max(MAX, m);
+	}
+	private static boolean isArea(int nx, int ny) {
+		// TODO Auto-generated method stub
+		if(nx>=0 && ny >=0 && nx<R && ny<C) return true;
+		return false;
 	}
 }
