@@ -1,5 +1,3 @@
-package algo_0110;
-
 import java.io.*;
 import java.util.*;
 
