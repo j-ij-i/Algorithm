@@ -1,40 +1,72 @@
+package algo_0112;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.StringTokenizer;
+import java.util.TreeSet;
 
-public class BOJ_2251 {
-	static int A,B,C;
-	static boolean water[];
-	static int arr[];
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+public class BOJ_2251_SOL {
+
+	static int[] arr;
+	static boolean[][] check;
+	static Set<Integer> answer;
+	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st;
-		st = new StringTokenizer(br.readLine());
-		arr = new int[2];
-		arr[0]= Integer.parseInt(st.nextToken());
-		arr[1]= Integer.parseInt(st.nextToken());
-		C = Integer.parseInt(st.nextToken());
-		water = new boolean[C+1];
-		PriorityQueue pq = new PriorityQueue<>();
-		water[C] = true;
-		pq.add(C);
-		for(int i = 0 ; i < 2 ; i++) {
-			//N에만 쏟고 난 후 남았을 때
-			int N = C - arr[i];
-			if(!water[N]&& N > 0 && N < C)pq.add(N);
-			if(!water[arr[i]]&& arr[i] > 0 && arr[i] < C)pq.add(arr[i]);
-		}
-
-		//AB에 다쏟아붓고 난 후 
-		int all = C-arr[0]-arr[1];
-		if(all > 0 && all < C&&!water[all])pq.add(all);
+		StringTokenizer st= new StringTokenizer(br.readLine());
 		
-		while(!pq.isEmpty()) {
-			System.out.print(pq.poll()+" ");
+		arr = new int[3];
+		check = new boolean[201][201];
+		for(int i=0; i<3; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
+		}
+		
+		answer = new TreeSet<>();
+		dfs(0,0, arr[2]);
+		
+		for(int num : answer) {
+			System.out.print(num+" ");
 		}
 	}
-
+	static void dfs(int a, int b, int c){
+		if(check[a][b]) return;
+		
+		if(a==0) {
+			answer.add(c);
+		}
+		check[a][b] = true;
+		// 0 -> 1
+		if(a+b > arr[1]) {
+			dfs((a+b)-arr[1], arr[1], c);
+		}else {
+			dfs(0, a+b, c);
+		}
+		
+		// 1 -> 0
+		if(a+b > arr[0]) {
+			dfs(arr[0], a+b-arr[0], c);
+		}else {
+			dfs(a+b, 0, c);
+		}
+		// 2 -> 0
+		if(a+c > arr[0]) {
+			dfs(arr[0], b, a+c-arr[0]);
+		}else {
+			dfs(a+c, b, 0);
+		}
+		
+		
+		// 2 -> 1
+		if(b+c > arr[1]) 	{
+			dfs(a, arr[1], b+c-arr[1]);
+		}else {
+			dfs(a, b+c, 0);
+		}
+		
+		// 0 -> 2
+		dfs(a, 0, b+c);
+		// 1 -> 2
+		dfs(0, b, a+c);
+	}
 }
