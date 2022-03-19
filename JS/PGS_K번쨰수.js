@@ -8,3 +8,20 @@ function solution(array, commands) {
   }
   return answer;
 }
+
+function solution(array, commands) {
+  var answer = [];
+  for (let a = 0; a < commands.length; a++) {
+    const i = commands[a][0] - 1;
+    const j = commands[a][1] - 1;
+    const k = commands[a][2];
+
+    let Narray = array.slice(i, j + 1);
+    Narray.sort((a, b) => {
+      return a - b;
+    });
+    answer.push(Narray[k - 1]);
+  }
+
+  return answer;
+}
