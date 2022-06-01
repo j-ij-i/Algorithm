@@ -91,3 +91,19 @@ dataset.add(7)
 dataset.update([8,9])
 dataset.remove(3)
 print(dataset)
+
+# input() => 한 줄의 문자열을 입력 받는 함수
+# map() => 리스트의 모든 원소에 각각 특정한 함수를 적용
+# 공백을 기준으로 구분된 데이터를 입력 받을 때
+list(map(int, input().split()))
+# 공백을 기준으로 데이터
+a,b,c = map(int,input().split())
+
+# 데이터의 개수 입력
+n = int(input())
+# 입력받은 정수 리스트
+data = list(map(int, input().split()))
+
+# 사용자로부터 빠르게 받는 경우
+# sys.stdin.readlion()
+# 단 입력 후 엔터가 줄바꿈 기호로 입력되어 rstrip() 매서드와 함께 사용
