@@ -18,9 +18,5 @@ for i in range(N):
         else:
             print(-1)
             stack.pop(-1)
-    elif cmd =="size":
 
-    elif cmd == "empty":
-
-    elif cmd == "top":
 

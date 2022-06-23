@@ -43,7 +43,7 @@ for i in range(N):
         if cnt < 0:
             result += "NO\n"
             break
-	else:
+    else:
         result += "YES\n" if cnt == 0 else "NO\n"
 
 print(result)
