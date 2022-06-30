@@ -31,3 +31,4 @@ answer = set(answer)
 answer = list(answer)
 for a in sorted(answer):
     print(a)
+
