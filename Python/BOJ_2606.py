@@ -1,22 +1,7 @@
-n = int(input())
-pair = int(input())
-graph = [[]*n for _ in range(n+1)]
-for i in pair:
-     comnum1, comnum2 = map(int, input().split())
-     graph[comnum1].append(comnum2)
-     graph[comnum2].append(comnum1)
+from collections import deque
 
-cnt = 0
-visited = [0]*(n+1)
+m, n = map(int, input().split())
+graph = [list(map(int, input().split())) for _ in range(n)]
+visited = [[-1] * m for _ in range(n)]
+dx, dy = (0, 0, -1, 1), (1, -1, 0, 0)
 
-def dfs(start):
-     global cnt
-     visited[start] = 1
-     for i in graph[start]:
-          if visited[i] == 0:
-               dfs(i)
-               cnt += 1
-
-
-dfs(1)
-print(cnt)
