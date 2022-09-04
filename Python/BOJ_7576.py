@@ -1,26 +1,46 @@
-import sys
-import collections
+from collections import deque
 
-input = sys.stdin.readline
+N, M = map(int, input().split())
+graph = []
+for _ in range(M):
+    graph.append(list(map(int, input().split())))
 
-n, m = map(int, input().split())
-maze = [list(map(int, ' '.join(input()).split())) for _ in range(n)]
+# 다 1 이상이고 0이 없는 경우
+flag = False
 
-# 이동
-dx = [1, -1, 0, 0]
-dy = [0, 0, 1, -1]
+tomato_q = deque()
+MAX_CNT = 1
+dx = [0,0,-1,1]
+dy = [1,-1,0,0]
+for i in range(N):
+    for j in range(M):
+        if 1 == graph[j][i]:
+            tomato_q.append((j, i, 1))
+        elif graph[j][i] == 0:
+            flag = True
 
-Q = collections.deque([(0, 0)])
-result = 0
+if not flag:
+    print(0)
+else:
+    while tomato_q:
+        x, y, cnt = tomato_q.popleft()
 
-while Q:
-    x, y = Q.popleft()
-    for i in range(4):
-        nx, ny = x + dx[i], y + dy[i]
-        if 0 <= nx < n and 0 <= ny < m:
-            if maze[nx][ny] == 1:
-                # 방문
-                maze[nx][ny] = maze[x][y] + 1
-                Q.append((nx, ny))
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
 
-print(maze[n - 1][m - 1])
+            if 0 <= nx < M and 0 <= ny < N:
+                if graph[nx][ny] == 0:
+                    graph[nx][ny] = cnt+1
+                    MAX_CNT = max(MAX_CNT, cnt+1)
+                    tomato_q.append((nx,ny,cnt+1))
+    #0이 있는 경우
+    for grp in graph:
+        if 0 in grp:
+            print(-1)
+            break
+    else:
+        if MAX_CNT == 1:
+            print(0)
+        else:
+            print(MAX_CNT-1)
