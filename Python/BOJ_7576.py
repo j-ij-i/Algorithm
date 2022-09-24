@@ -24,7 +24,6 @@ if not flag:
 else:
     while tomato_q:
         x, y, cnt = tomato_q.popleft()
-
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
