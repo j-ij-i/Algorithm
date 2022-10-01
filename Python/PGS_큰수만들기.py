@@ -1,13 +1,15 @@
-from itertools import combinations
+from collections import deque
 def solution(number, k):
-    answer = ''
-    arr = list(number)
-    k = len(arr)-k
-    perlist = combinations(arr,k)
-    max = 0
-    for i in perlist:
-        num = int(''.join(i))
-        if num > max:
-            max = num
-    print(max)
-    return str(max)
+    arr = deque(number)
+    res = [arr.popleft()]
+    while arr:
+        x = arr.popleft()
+        while res and res[-1] < x and k>0:
+            res.pop()
+            k -= 1
+        res.append(x)
+        
+    while k > 0:
+        res.pop()
+        k-=1
+    return ''.join(res)
