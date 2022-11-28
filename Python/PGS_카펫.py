@@ -20,3 +20,15 @@ def solution(brown, yellow):
                 break            
         
     return answer
+
+
+# 다른 풀이 (2022.11.28 update)
+
+def solution(brown, yellow):
+    answer = []
+    for i in range(3, brown+yellow):
+        if ((brown+yellow) % i == 0):
+            x = i
+            y = (brown+yellow)//i
+            if (yellow) == ((x-2) * (y-2)):
+                return [y,x]
