@@ -4,7 +4,5 @@ def solution(phone_number):
     for i in range(len(phone_number)-4):
         answer += '*'
     
-    for i in range(-1,-5,-1):
-        answer += phone_number[i]
-    
+    answer += phone_number[-4:]
     return answer
