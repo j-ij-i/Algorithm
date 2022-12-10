@@ -16,3 +16,23 @@ def solution(people, limit):
                 answer += 1
             
     return answer
+
+
+from collections import deque
+def solution(people, limit):
+    
+    answer = 0
+    arr = deque(sorted(people))
+    
+    while arr:
+        temp = arr.pop()
+        if arr and arr[0] + temp > limit:
+            answer += 1
+        elif not arr:
+            answer += 1
+        else:
+            arr.popleft()
+            answer += 1
+        
+
+    return answer

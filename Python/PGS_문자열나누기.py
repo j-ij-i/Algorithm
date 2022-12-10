@@ -10,15 +10,17 @@ def solution(s):
             target = i
             a += 1
         else:
-            if target == i:
+            if i == target:
                 a += 1
             else:
                 b += 1
             if a == b:
                 answer += 1
+                print(i)
                 target = ''
                 a = 0
                 b = 0
-        
                 
+    if not target == '':
+        answer += 1
     return answer
